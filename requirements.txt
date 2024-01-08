@@ -1,5 +1,5 @@
-flask 
-flask_smorest
+flask  
+flask_smorest 
 Flask-SQLAlchemy 
 flask_cors 
 Flask-OAuthlib 
@@ -8,7 +8,7 @@ python-jose
 oauthlib 
 requests 
 Pillows
-blocklist
+blocklist 
 flask-jwt-extended 
 flask_migrate
 
