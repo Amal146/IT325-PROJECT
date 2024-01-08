@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Welcome Page</title>
+</head>
+
+<body>
+
+    <div class="Wcontainer" id="Wcontainer">
+        <div class="athlete-info" id="athleteInfo">
+            <h1>Our Champions</h1>
+        </div>
+        
+        <div class="event-info" id="eventInfo">
+            <h1>Coming Events</h1>
+        </div>
+    </div>
+   
+    <script type="text/javascript" src="{{ url_for('static', filename='scriptWlc.js') }}"></script>
+</body>
+
+</html>

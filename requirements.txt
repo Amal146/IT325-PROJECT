@@ -1,0 +1,12 @@
+Flask 
+Flask-SQLAlchemy 
+flask_cors 
+Flask-OAuthlib 
+pymysql
+python-jose 
+oauthlib 
+requests 
+Pillows
+flask-jwt-extended 
+flask_migrate
+
