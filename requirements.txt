@@ -6,9 +6,7 @@ Flask-OAuthlib
 pymysql
 python-jose 
 oauthlib 
-requests 
-Pillows
-blocklist 
+requests  
 flask-jwt-extended 
 flask_migrate
 

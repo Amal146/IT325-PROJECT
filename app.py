@@ -4,7 +4,6 @@ from flask_migrate import Migrate
 from flask import Flask, jsonify
 from flask_jwt_extended import JWTManager
 from db import db
-from blocklist import BLOCKLIST
 from flask_cors import CORS
 
 # Register blueprints
@@ -51,9 +50,6 @@ def expired_token_callback(jwt_header, jwt_payload):
 def invalid_token_callback(error):
         return (jsonify( {"message": "Signature verification failed.", "error": "invalid_token"}),401, )
     
-@jwt.token_in_blocklist_loader
-def check_if_token_in_blocklist(jwt_header, jwt_payload):
-       return jwt_payload["jti"] in BLOCKLIST
 
 
 @jwt.revoked_token_loader
