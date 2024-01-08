@@ -2,7 +2,8 @@ flask
 flask_smorest 
 Flask-SQLAlchemy 
 flask_cors 
-Flask-OAuthlib 
+Flask-OAuthlib
+passlib 
 pymysql
 python-jose 
 oauthlib 
