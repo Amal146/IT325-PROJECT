@@ -33,9 +33,14 @@ migrate = Migrate()
 jwt = JWTManager()
 migrate.init_app(app, db)
 jwt.init_app(app)
-  
 app.config["JWT_SECRET_KEY"] = "amal"
-    
+
+# Create all the tables
+
+with app.app_context(): 
+    db.create_all()
+
+
 @jwt.additional_claims_loader
 def add_claims_to_jwt(identity):
         if identity ==1:
@@ -64,10 +69,7 @@ def token_not_fresh_callback(jwt_header, jwt_payload):
 def missing_token_callback(error):
         return (jsonify({"description": "Request does not contain an access token.","error": "authorization_required",}),401,)
 
-# Create all the tables
-with app.app_context():
-    import models
-    db.create_all()
+
     
 api.register_blueprint(athlete_bp)
 api.register_blueprint(event_bp)
