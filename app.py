@@ -1,4 +1,4 @@
-import os
+import config
 from flask import render_template
 from flask_smorest import Api
 from flask_migrate import Migrate
