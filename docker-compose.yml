@@ -1,10 +1,25 @@
-version: '3'
+version: "3.9"
 services:
-  web:
+  flask-app:
     build: .
     ports:
       - "5000:5000"
-    volumes:
-      - .:/app
+    depends_on:
+      - mysql-db
+    networks:
+      - my-network
+
+  mysql-db:
+    image: mysql:latest
     environment:
-      FLASK_ENV: development
+      MYSQL_ROOT_PASSWORD: example_password
+      MYSQL_DATABASE: sport_api
+      MYSQL_USER: amal
+      MYSQL_PASSWORD: amal
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+
