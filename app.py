@@ -35,10 +35,6 @@ migrate.init_app(app, db)
 jwt.init_app(app)
 app.config["JWT_SECRET_KEY"] = "amal"
 
-# Create all the tables
-
-with app.app_context(): 
-    db.create_all()
 
 
 @jwt.additional_claims_loader
