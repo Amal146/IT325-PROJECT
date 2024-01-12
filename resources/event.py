@@ -22,7 +22,7 @@ def serialize_event(event):
 @event_bp.route("/events")
 class EventListResource(MethodView):
     @event_bp.response(200, EventSchema(many=True))
-    def get(self):  # Include 'self' parameter
+    def get(self):
         events = Event.query.all()
         serialized_events = [serialize_event(event) for event in events]
         return jsonify(serialized_events), 200
