@@ -1,15 +1,28 @@
-<<<<<<< HEAD
-# Tunisian Athletes API
 
-This API manages Tunisian athletes' information, achievements, events, and ticket booking experiences.
+# TuniChampion
 
-### Prerequisites
-- Docker
-- Python 3.9+
+TuniChampion is an API dedicated to serve inforamtions about the tunisian athletes' achievements and to provide the ability to book reservation tickets to their events such as marathons and matchs.
 
-### Installation and Usage
-1. Clone the repository
-2. Build and run the Docker container:
-=======
-# IT325-PROJECT
->>>>>>> 6faa4a7a8e30ab8b3c418b7c4d62050b33bb0978
+
+
+## ## Main Libraries Used
+  - Flask-Migrate: For handling all database migrations. 
+  - Flask-RESTful: A library for creating RESTful APIs.  
+  - Flask-SQLAlchemy: Adds support for SQLAlchemy ORM.
+  - Flask-Cors: an extension for Flask that adds Cross-Origin Resource Sharing (CORS) headers to responses
+## ##Installation
+
+To run the project, navigate to the webapp directory and execute python app.py. \
+
+The Swagger document can be accessed at http://127.0.0.1:5000/api.\
+
+
+To build and run the project in a Docker container, execute \
+docker d -t flask-example . \
+and \
+docker run -p 5000:5000 --name flask-example flask-example.
+
+## Feedback
+
+If you have any feedback, please reach out to us at amaljw2002@gmail.com
+
